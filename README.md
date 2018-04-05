@@ -8,12 +8,14 @@ Overview
     - The script dumps all of the data to 'all.csv'
 
 Scripts - run with python 2
+- The lab computers have an outdated version of sklearn, in this version there is no neural network implementation... Please run with sklearn 0.19.1
 - Are located in 'src'
 - 'logistic_regression.py' is the logistic regression
 - 'neural_net.py' is the neural net
 - 'svm.py' is the svm
 
 Each was implemented with scikit-learn
+I had to use some deprecated functions in order for it to run on lab computers
 
 Results, testing was done with the data that was obtained from the 'train_test_split' function
 1. Logistic Regression
