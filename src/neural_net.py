@@ -1,6 +1,6 @@
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
-from . import neural_network
+from sklearn.neural_network import MLPClassifier
 from sklearn.cross_validation import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix
 
@@ -11,7 +11,7 @@ x_train_raw, x_test_raw, y_train, y_test = train_test_split(data[1], data[0])
 vec = TfidfVectorizer()
 x_train = vec.fit_transform(x_train_raw.values.astype('U'))
 
-reg = MLPClassifier(max_itr=50)
+reg = MLPClassifier(max_iter=100)
 reg.fit(x_train, y_train)
 
 print reg
